@@ -37,6 +37,17 @@ public class CalculatorTest {
         Assert.assertEquals("multiply 5*2", expected,actual);
     }
 
+    @Test
+    public void squareRootTest() throws ComplexNumberException{
+        double expected = 10;
+        double actual = Calculator.squareRoot(100);
+        Assert.assertEquals(expected,actual,10^-15);
+    }
 
+    @Test(expected = ComplexNumberException.class)
+    public void squareRootTest1() throws ComplexNumberException {
+        Calculator.squareRoot(-1);
+
+    }
 
 }

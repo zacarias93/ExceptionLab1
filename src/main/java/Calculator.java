@@ -25,5 +25,13 @@ public class Calculator {
         return a*b;
     }
 
+    public static double squareRoot(double num) throws ComplexNumberException {
+
+        if(num < 0) {
+            throw new ComplexNumberException();
+        }
+
+        return Math.sqrt(num);
+    }
 
 }
