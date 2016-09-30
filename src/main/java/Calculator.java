@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.operations.Div;
+
 /**
  * Created by zaclee on 9/30/16.
  */
@@ -11,10 +13,10 @@ public class Calculator {
         return a-b;
     }
 
-    public static int divide(int a, int b) throws ArithmeticException {
+    public static int divide(int a, int b) throws DivisionByZeroException {
 
         if(b == 0) {
-            throw new ArithmeticException("Can't divide by 0.");
+            throw new DivisionByZeroException();
         }
         return a/b;
     }

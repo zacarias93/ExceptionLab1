@@ -19,14 +19,14 @@ public class CalculatorTest {
     }
 
     @Test
-    public void divideTest() {
+    public void divideTest() throws DivisionByZeroException {
         int expected = 10;
         int actual = Calculator.divide(100,10);
         Assert.assertEquals("div 100/10", expected,actual);
     }
 
-    @Test(expected = ArithmeticException.class)
-    public void divideTest2() {
+    @Test(expected = DivisionByZeroException.class)
+    public void divideTest2() throws DivisionByZeroException {
         Calculator.divide(100,0);
     }
 
